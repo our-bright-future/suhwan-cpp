@@ -2,25 +2,25 @@
 
 using namespace std;
 
-typedef struct LinkedList
+typedef struct node
 {
 	node* nextnode;
 	int data;
-}node;
+}
 
-void AddFirst(node* head, int data);		//¸Ç¾ÕÂÊ ¹Ù·Î ´ÙÀ½¿¡ node Ãß°¡
-void AddLast(node* head, int data);			//¸Ç µÚ¿¡ node Ãß°¡
-void AddNode(node* head, int n, int data);	//head¸¦ index 0ÀÌ¶ó ÇÒ¶§ n¹øÂ° ¿Í n+1 »çÀÌ¿¡ ³ëµå Ãß°¡
+void AddFirst(node* head, int data);		//ë§¨ì•ìª½ ë°”ë¡œ ë‹¤ìŒì— node ì¶”ê°€
+void AddLast(node* head, int data);			//ë§¨ ë’¤ì— node ì¶”ê°€
+void AddNode(node* head, int n, int data);	//headë¥¼ index 0ì´ë¼ í• ë•Œ në²ˆì§¸ ì™€ n+1 ì‚¬ì´ì— ë…¸ë“œ ì¶”ê°€
 
-void DeleteFirst(node* head);				//¸Ç ¾ÕÂÊ node Á¦°Å
-void DeleteLast(node* head);				//¸Ç µÚÂÊ node Á¦°Å
-void DeleteNode(node* head, int n);			//head¸¦ index 0ÀÌ¶ó ÇÒ¶§ n¹øÂ° ³ëµå Á¦°Å
+void DeleteFirst(node* head);				//ë§¨ ì•ìª½ node ì œê±°
+void DeleteLast(node* head);				//ë§¨ ë’¤ìª½ node ì œê±°
+void DeleteNode(node* head, int n);			//headë¥¼ index 0ì´ë¼ í• ë•Œ në²ˆì§¸ ë…¸ë“œ ì œê±°
 
-int GetData(node* head, int n);				//head¸¦ index 0ÀÌ¶ó ÇÒ¶§ n¹øÂ° data ¾ò´Â ÇÔ¼ö ÃÖ´ë ¸®½ºÆ® °³¼öº¸´Ù ³Ñ¾î°¡¸é ¸¶Áö¸· data Ãâ·Â
+int GetData(node* head, int n);				//headë¥¼ index 0ì´ë¼ í• ë•Œ në²ˆì§¸ data ì–»ëŠ” í•¨ìˆ˜ ìµœëŒ€ ë¦¬ìŠ¤íŠ¸ ê°œìˆ˜ë³´ë‹¤ ë„˜ì–´ê°€ë©´ ë§ˆì§€ë§‰ data ì¶œë ¥
 
-void ShowList(node* head);					//¿¬°á¸®½ºÆ® ÀüÃ¼ Ãâ·Â
+void ShowList(node* head);					//ì—°ê²°ë¦¬ìŠ¤íŠ¸ ì „ì²´ ì¶œë ¥
 
-void FreeList(node* head);					//¿¬°á¸®½ºÆ® ÀüÃ¼ ÇÒ´çÇØÁ¦
+void FreeList(node* head);					//ì—°ê²°ë¦¬ìŠ¤íŠ¸ ì „ì²´ í• ë‹¹í•´ì œ
 
 //int main()
 //{
